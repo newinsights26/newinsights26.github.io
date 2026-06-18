@@ -3475,5 +3475,27 @@ body.home-background #footer > .inner {
 
 		}
 
+/* Fix menu above decorative backgrounds */
+
+body.home-background #wrapper::before,
+body.home-background #wrapper::after,
+body.home-background .home-bg-bottom {
+	pointer-events: none;
+}
+
+body.home-background #header {
+	position: relative;
+	z-index: 10010;
+}
+
+body.home-background #header nav {
+	z-index: 10011;
+}
+
+body.home-background #menu {
+	position: fixed;
+	z-index: 10020;
+	pointer-events: auto;
+}
 
 		}

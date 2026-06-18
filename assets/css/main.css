@@ -121,22 +121,9 @@ body.home-background #wrapper {
 	background: #06231f;
 }
 
-/* Keep page content above the decorative background, but do not affect #menu.
-   If #menu is a direct child of #wrapper, the generic selector below would
-   override its position: fixed and z-index. */
-body.home-background #wrapper > *:not(#menu) {
+body.home-background #wrapper > * {
 	position: relative;
 	z-index: 1;
-}
-
-body.home-background #header {
-	z-index: 10001;
-}
-
-body.home-background #menu {
-	position: fixed;
-	z-index: 10002;
-	pointer-events: auto;
 }
 
 /* Top: visible from the very beginning of the page. */
@@ -3272,20 +3259,10 @@ body.home-background #footer > .inner {
 
 		}
 
-	/* Do not dim/disable the whole #wrapper: #menu may live inside it.
-	   Dim only the page content, leaving the menu visible and clickable. */
 	body.is-menu-visible #wrapper {
-		cursor: default;
-	}
-
-	body.is-menu-visible #wrapper > *:not(#menu) {
 		pointer-events: none;
+		cursor: default;
 		opacity: 0.25;
-	}
-
-	body.is-menu-visible #menu {
-		pointer-events: auto;
-		opacity: 1;
 	}
 
 	body.is-menu-visible #menu {
@@ -3497,3 +3474,70 @@ body.home-background #footer > .inner {
 			}
 
 		}
+
+/* ==========================================================
+   FIX: keep the fixed hamburger/menu above the home math layers
+   ========================================================== */
+
+/* The home background creates several stacking contexts.
+   Give the header/nav a stacking level higher than #main/footer/background. */
+body.home-background #header {
+	position: relative;
+	z-index: 10003 !important;
+}
+
+body.home-background #header nav {
+	position: fixed;
+	z-index: 10004 !important;
+	pointer-events: auto !important;
+}
+
+body.home-background #header nav ul,
+body.home-background #header nav li,
+body.home-background #header nav a {
+	pointer-events: auto !important;
+}
+
+/* Keep the sliding menu above every decorative layer, whether it is inside
+   or outside #wrapper in the HTML. */
+body.home-background #menu,
+body.is-menu-visible #menu {
+	position: fixed;
+	z-index: 10005 !important;
+	pointer-events: auto !important;
+}
+
+/* The decorative layers must never receive clicks. */
+body.home-background #wrapper::before,
+body.home-background #wrapper::after,
+body.home-background .home-bg-bottom {
+	pointer-events: none !important;
+}
+
+/* If #menu is inside #wrapper, the original rule
+   body.is-menu-visible #wrapper { pointer-events: none; opacity: .25; }
+   also disables/dims the menu. Do not disable the whole wrapper; disable
+   only the page sections behind the menu. */
+body.is-menu-visible #wrapper {
+	pointer-events: auto !important;
+	opacity: 1 !important;
+}
+
+body.is-menu-visible #wrapper > *:not(#menu) {
+	pointer-events: none !important;
+	opacity: 0.25;
+}
+
+body.is-menu-visible #wrapper #menu,
+body.is-menu-visible #menu {
+	pointer-events: auto !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+/* Optional but useful: if the fixed nav was being clipped by the wrapper on
+   some browsers/layouts, keep horizontal clipping only and allow vertical paint. */
+body.home-background #wrapper {
+	overflow-x: hidden;
+	overflow-y: visible;
+}

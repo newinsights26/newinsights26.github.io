@@ -1,17 +1,91 @@
+```html
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Free for personal and commercial use under the CCA 3.0 license
+	(html5up.net/license)
 -->
 <html lang="it">
 	<head>
 		<link rel="icon" type="image/png" href="images/logo.png" />
-		<title>New Insights: CvOLA</title>
+		<title>Programme | New Insights: CvOLA</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+
+		<style>
+			.programme-intro {
+				margin-bottom: 2.5em;
+			}
+
+			.programme-day {
+				margin-bottom: 3em;
+			}
+
+			.programme-day h2 {
+				margin-bottom: 0.8em;
+			}
+
+			.programme-table-wrapper {
+				overflow-x: auto;
+				border-radius: 0.4em;
+			}
+
+			.programme-table {
+				width: 100%;
+				min-width: 540px;
+				margin-bottom: 0;
+				border-collapse: collapse;
+			}
+
+			.programme-table th,
+			.programme-table td {
+				padding: 0.9em 1em;
+				vertical-align: middle;
+			}
+
+			.programme-table th {
+				text-align: left;
+				font-weight: 700;
+			}
+
+			.programme-table .time {
+				width: 145px;
+				white-space: nowrap;
+				font-weight: 600;
+			}
+
+			.programme-table .speaker {
+				font-weight: 700;
+			}
+
+			.programme-table .break-row td {
+				font-style: italic;
+			}
+
+			.programme-table .remote {
+				font-weight: 400;
+				font-style: italic;
+			}
+
+			@media screen and (max-width: 736px) {
+				.programme-table th,
+				.programme-table td {
+					padding: 0.75em;
+				}
+
+				.programme-table .time {
+					width: 125px;
+				}
+			}
+		</style>
 	</head>
 
 	<body class="is-preload home-background">
@@ -47,7 +121,13 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="location.html">Location and Venue</a></li>
-					<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe5fSGxKk_3XM_G7DDtaBfcVH96iI1Hy99_vSmGXKuGsXJYkw/viewform?usp=preview">Registration</a></li>
+					<li>
+						<a
+							href="https://docs.google.com/forms/d/e/1FAIpQLSe5fSGxKk_3XM_G7DDtaBfcVH96iI1Hy99_vSmGXKuGsXJYkw/viewform?usp=preview"
+						>
+							Registration
+						</a>
+					</li>
 					<li><a href="program.html">Programme</a></li>
 				</ul>
 			</nav>
@@ -56,9 +136,431 @@
 			<div id="main">
 				<div class="inner">
 
-					<h1>Programme</h1>
+					<header class="programme-intro">
+						<h1>Programme</h1>
+						<p>
+							The conference programme is listed below.
+							Minor changes may still occur.
+						</p>
+					</header>
 
-					<h3>Under construction</h3>
+					<!-- Tuesday 15 -->
+					<section class="programme-day">
+						<h2>Tuesday, September 15</h2>
+
+						<div class="table-wrapper programme-table-wrapper">
+							<table class="programme-table">
+								<thead>
+									<tr>
+										<th scope="col">Time</th>
+										<th scope="col">Event</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-15T14:15">14:15</time>
+											–
+											<time datetime="2026-09-15T15:00">15:00</time>
+										</td>
+										<td>Opening and welcome addresses</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-15T15:00">15:00</time>
+											–
+											<time datetime="2026-09-15T15:45">15:45</time>
+										</td>
+										<td>
+											Talk 1 —
+											<span class="speaker">John Ball</span>
+											<span class="remote">(online)</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-15T15:50">15:50</time>
+											–
+											<time datetime="2026-09-15T16:35">16:35</time>
+										</td>
+										<td>
+											Talk 2 —
+											<span class="speaker">Emilio Acerbi</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-15T16:35">16:35</time>
+											–
+											<time datetime="2026-09-15T17:05">17:05</time>
+										</td>
+										<td>Coffee break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-15T17:05">17:05</time>
+											–
+											<time datetime="2026-09-15T17:50">17:50</time>
+										</td>
+										<td>
+											Talk 3 —
+											<span class="speaker">Luigi Ambrosio</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+
+					<!-- Wednesday 16 -->
+					<section class="programme-day">
+						<h2>Wednesday, September 16</h2>
+
+						<div class="table-wrapper programme-table-wrapper">
+							<table class="programme-table">
+								<thead>
+									<tr>
+										<th scope="col">Time</th>
+										<th scope="col">Event</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T09:00">09:00</time>
+											–
+											<time datetime="2026-09-16T09:45">09:45</time>
+										</td>
+										<td>
+											Talk 4 —
+											<span class="speaker">Lucio Boccardo</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T09:50">09:50</time>
+											–
+											<time datetime="2026-09-16T10:35">10:35</time>
+										</td>
+										<td>
+											Talk 5 —
+											<span class="speaker">Verena Bögelein</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-16T10:35">10:35</time>
+											–
+											<time datetime="2026-09-16T11:05">11:05</time>
+										</td>
+										<td>Coffee break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T11:05">11:05</time>
+											–
+											<time datetime="2026-09-16T11:50">11:50</time>
+										</td>
+										<td>
+											Talk 6 —
+											<span class="speaker">Giuseppe Buttazzo</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T11:55">11:55</time>
+											–
+											<time datetime="2026-09-16T12:40">12:40</time>
+										</td>
+										<td>
+											Talk 7 —
+											<span class="speaker">Marco Cicalese</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-16T12:40">12:40</time>
+											–
+											<time datetime="2026-09-16T14:30">14:30</time>
+										</td>
+										<td>Lunch break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T14:30">14:30</time>
+											–
+											<time datetime="2026-09-16T15:15">15:15</time>
+										</td>
+										<td>
+											Talk 8 —
+											<span class="speaker">Andrea Cianchi</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T15:20">15:20</time>
+											–
+											<time datetime="2026-09-16T16:05">16:05</time>
+										</td>
+										<td>
+											Talk 9 —
+											<span class="speaker">Bernard Dacorogna</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-16T16:05">16:05</time>
+											–
+											<time datetime="2026-09-16T16:35">16:35</time>
+										</td>
+										<td>Coffee break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T16:35">16:35</time>
+											–
+											<time datetime="2026-09-16T17:20">17:20</time>
+										</td>
+										<td>
+											Talk 10 —
+											<span class="speaker">Gianni Dal Maso</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-16T17:25">17:25</time>
+											–
+											<time datetime="2026-09-16T18:10">18:10</time>
+										</td>
+										<td>
+											Talk 11 —
+											<span class="speaker">Frank Duzaar</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+
+					<!-- Thursday 17 -->
+					<section class="programme-day">
+						<h2>Thursday, September 17</h2>
+
+						<div class="table-wrapper programme-table-wrapper">
+							<table class="programme-table">
+								<thead>
+									<tr>
+										<th scope="col">Time</th>
+										<th scope="col">Event</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-17T09:00">09:00</time>
+											–
+											<time datetime="2026-09-17T09:45">09:45</time>
+										</td>
+										<td>
+											Talk 12 —
+											<span class="speaker">Paolo Marcellini</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-17T09:50">09:50</time>
+											–
+											<time datetime="2026-09-17T10:35">10:35</time>
+										</td>
+										<td>
+											Talk 13 —
+											<span class="speaker">Vincenzo Ferone</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-17T10:35">10:35</time>
+											–
+											<time datetime="2026-09-17T11:05">11:05</time>
+										</td>
+										<td>Coffee break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-17T11:05">11:05</time>
+											–
+											<time datetime="2026-09-17T11:50">11:50</time>
+										</td>
+										<td>
+											Talk 14 —
+											<span class="speaker">Irene Fonseca</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-17T11:55">11:55</time>
+											–
+											<time datetime="2026-09-17T12:40">12:40</time>
+										</td>
+										<td>
+											Talk 15 —
+											<span class="speaker">Vesa Julin</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-17T12:40">12:40</time>
+											–
+											<time datetime="2026-09-17T14:30">14:30</time>
+										</td>
+										<td>Lunch break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-17T14:30">14:30</time>
+											–
+											<time datetime="2026-09-17T15:15">15:15</time>
+										</td>
+										<td>
+											Talk 16 —
+											<span class="speaker">Massimiliano Morini</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-17T15:20">15:20</time>
+											–
+											<time datetime="2026-09-17T16:05">16:05</time>
+										</td>
+										<td>
+											Talk 17 —
+											<span class="speaker">Francesco Maggi</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-17T16:05">16:05</time>
+											–
+											<time datetime="2026-09-17T16:35">16:35</time>
+										</td>
+										<td>Coffee break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-17T16:35">16:35</time>
+											–
+											<time datetime="2026-09-17T17:20">17:20</time>
+										</td>
+										<td>
+											Talk 18 —
+											<span class="speaker">Carlo Mantegazza</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+
+					<!-- Friday 18 -->
+					<section class="programme-day">
+						<h2>Friday, September 18</h2>
+
+						<div class="table-wrapper programme-table-wrapper">
+							<table class="programme-table">
+								<thead>
+									<tr>
+										<th scope="col">Time</th>
+										<th scope="col">Event</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-18T09:00">09:00</time>
+											–
+											<time datetime="2026-09-18T09:45">09:45</time>
+										</td>
+										<td>
+											Talk 19 —
+											<span class="speaker">Giovanni Leoni</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-18T09:50">09:50</time>
+											–
+											<time datetime="2026-09-18T10:35">10:35</time>
+										</td>
+										<td>
+											Talk 20 —
+											<span class="speaker">Diego Pallara</span>
+										</td>
+									</tr>
+
+									<tr class="break-row">
+										<td class="time">
+											<time datetime="2026-09-18T10:35">10:35</time>
+											–
+											<time datetime="2026-09-18T11:05">11:05</time>
+										</td>
+										<td>Coffee break</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-18T11:05">11:05</time>
+											–
+											<time datetime="2026-09-18T11:50">11:50</time>
+										</td>
+										<td>
+											Talk 21 —
+											<span class="speaker">Aldo Pratelli</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="time">
+											<time datetime="2026-09-18T11:55">11:55</time>
+											–
+											<time datetime="2026-09-18T12:40">12:40</time>
+										</td>
+										<td>
+											Talk 22 —
+											<span class="speaker">Cristina Trombetti</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
 
 				</div>
 			</div>
@@ -70,7 +572,10 @@
 				<div class="inner">
 					<ul class="copyright">
 						<li>&copy; New Insights. All rights reserved</li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>
+							Design:
+							<a href="https://html5up.net">HTML5 UP</a>
+						</li>
 					</ul>
 				</div>
 			</footer>
@@ -86,3 +591,4 @@
 
 	</body>
 </html>
+```

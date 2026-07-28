@@ -760,12 +760,14 @@
 						abstract: "",
 					},
 					"Irene Fonseca": {
-						title: "",
-						abstract: "",
+						title: "Gamma-convergence and stochastic homogenization for functionals in the A-free setting",
+						abstract:
+							"We obtain a compactness result for Γ-convergence of integral functionals defined on A-free vector fields. This is used to study homogenization problems for these functionals without periodicity assumptions. More precisely, we prove that the homogenized integrand can be obtained via a cell formula. Under the usual stochastic periodicity assumptions, this result is then used to solve the stochastic homogenization problem by means of the subadditive ergodic theorem.\n\nThis is joint work with Gianni Dal Maso and Rita Ferreira.",
 					},
 					"Vesa Julin": {
-						title: "",
-						abstract: "",
+						title: "Asymptotical behavior of the volume preserving mean curvature flow",
+						abstract:
+							"The mean curvature flow is a classical topic and has been studied extensively due to its applications in geometry. Because of the gradient flow structure, it is also relevant in Calculus of Variations and shape optimization, where also the volume preserving variants are important. I will discuss recent results on the long-time behavior of globally well-defined weak solution of the volume preserving mean curvature ﬂow (the flat flow)  and how it is related to quantitative version of the Alexandrov theorem.",
 					},
 					"Giovanni Leoni": {
 						title: "",
@@ -790,8 +792,9 @@
 						abstract: "",
 					},
 					"Diego Pallara": {
-						title: "",
-						abstract: "",
+						title: "On the local regularity of very weak s-harmonic functions",
+						abstract:
+							"I present a new proof that any very weak (i.e., $L^1_{loc}$) s-harmonic function u in the unit ball of R^n is smooth. After improving the local summability properties of u, I show that a suitable version of the difference quotient method (tailored to get rid of the singularity of the integral kernel) allows to gain Sobolev regularity. Finally, by applying more standard methods, we reach real analyticity of u.\n\nJoint work with A. Carbotti, S. Cito, D.A. La Manna.",
 					},
 					"Aldo Pratelli": {
 						title: "",
@@ -889,6 +892,15 @@
 
 					button.addEventListener("click", () => {
 						const isOpen = button.getAttribute("aria-expanded") === "true";
+
+						document.querySelectorAll(".speaker-toggle[aria-expanded='true']").forEach((openButton) => {
+							if (openButton === button) return;
+
+							openButton.setAttribute("aria-expanded", "false");
+							const openDetail = document.getElementById(openButton.getAttribute("aria-controls"));
+							if (openDetail) openDetail.hidden = true;
+						});
+
 						button.setAttribute("aria-expanded", String(!isOpen));
 						detailRow.hidden = isOpen;
 						if (!isOpen && window.MathJax && window.MathJax.typesetPromise) {

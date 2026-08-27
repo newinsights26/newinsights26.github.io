@@ -741,8 +741,8 @@
 							"The goal is to present some optimization problems related to elliptic PDEs; the governing equations have Dirichlet boundary conditions on a given domain $\\Omega$ and are of the form\n$$\\begin{aligned}-{\\rm div}(a(x)\\nabla u)&=f\\\\[-0.15em]&\\quad\\hbox{where }a(x)\\hbox{ is the}\\\\[-0.15em]&\\quad\\hbox{control variable;}\\end{aligned}$$\n$$\\begin{aligned}-\\Delta u+V(x)u&=f\\\\[-0.15em]&\\quad\\hbox{where }V(x)\\hbox{ is the}\\\\[-0.15em]&\\quad\\hbox{control variable;}\\end{aligned}$$\n$$\\begin{aligned}-\\Delta u&=f\\\\[-0.15em]&\\quad\\hbox{where }f(x)\\hbox{ is the}\\\\[-0.15em]&\\quad\\hbox{control variable.}\\end{aligned}$$\nWe will mainly focus on the first case, where the coefficient $a(x)$ has to be determined, in a suitable given class of admissible choices, in order to optimize a given criterion. We first deal with the case when the cost is the so-called elastic compliance, and then we discuss the more general case when the problem is written as an optimal control problem. The case of elasticity problems, where $u$ is vector-valued, will be also presented.",
 					},
 					"Andrea Cianchi": {
-						title: "",
-						abstract: "",
+						title: "Sobolev inequalities for canceling operators",
+						abstract: "Sobolev-type inequalities involving homogeneous elliptic canceling differential operators and rearrangement-invariant norms on the Euclidean space are considered. They are characterized via considerably simpler one-dimensional Hardy-type inequalities. As a consequence, they are shown to hold exactly for the same norms as their counterparts depending on the standard gradient operator of the same order. The results offered provide a unified framework for the theory of Sobolev embeddings for the elliptic canceling operators. They build upon and incorporate earlier fundamental contributions dealing with the endpoint case of $L^1$-norms. They also include previously available results for the symmetric gradient, a prominent instance of an elliptic canceling operator. Related inequalities for Riesz potentials of vector-valued functions subject to co-canceling differential constraints are also discussed. This is joint work with Dominic Breit and Daniel Spector.",
 					},
 					"Marco Cicalese": {
 						title: "",
@@ -806,8 +806,8 @@
 							"I present a new proof that any very weak (i.e., $L^1_{loc}$) s-harmonic function u in the unit ball of R^n is smooth. After improving the local summability properties of u, I show that a suitable version of the difference quotient method (tailored to get rid of the singularity of the integral kernel) allows to gain Sobolev regularity. Finally, by applying more standard methods, we reach real analyticity of u.\n\nJoint work with A. Carbotti, S. Cito, D.A. La Manna.",
 					},
 					"Aldo Pratelli": {
-						title: "",
-						abstract: "",
+						title: "small miNImal Clusters in finsler manifOLds And their connectedness",
+						abstract: "We discuss the connectedness properties of small minimal clusters in Riemannian or Finsler manifolds. In particular, we show that such clusters are always connected in a Riemannian manifold; the same property is not true for a generic Finsler manifold, unless we are dealing with 2-clusters in a 2-dimensional such manifold. Several related properties are still open. Based on joint works with S. Nardulli, D. Carazzato, L. Felicetti, R. Ponciano, A. Carvalho.",
 					},
 					"Cristina Trombetti": {
 						title: "",
@@ -895,6 +895,16 @@
 					setAbstract(abstract, talk);
 					detail.appendChild(abstract);
 
+		if (talk.link) {
+			const link = document.createElement("a");
+			link.href = talk.link;
+			link.textContent = talk.linkText || "Link";
+			link.target = "_blank";
+			link.rel = "noopener noreferrer";
+			link.className = "talk-link";
+			detail.appendChild(link);
+		}
+					
 					detailCell.appendChild(detail);
 					detailRow.appendChild(detailCell);
 					button.closest("tr").after(detailRow);

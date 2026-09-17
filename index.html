@@ -82,9 +82,13 @@
 	}
 
 	.home-photo-gallery img {
-			width: 100%;
-			max-height: none;
-		}
+		display: block;
+		width: calc(50% - 0.75rem);
+		height: auto;
+		max-height: 340px;
+		object-fit: contain;
+		border-radius: 4px;
+	}
 					
 	/* Telefono: foto una sopra l'altra */
 	@media screen and (max-width: 736px) {

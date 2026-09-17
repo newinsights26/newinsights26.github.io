@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+	<!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -69,10 +69,42 @@
 					<span class="image main home-hero-image">
 						<img src="images/conference-home2.png" alt="Conference artwork" />
 					</span>
-					<span class="image main home-hero-image">
-						<img src="images/foto1.jpeg" alt="photo 1" style="height:250px;">  
-						<img src="images/foto2.jpeg" alt="photo 2" style="height:250px;">
-					</span>
+					<style>
+	.home-photo-gallery {
+		display: flex;
+		gap: 1.5rem;
+		width: 92%;
+		margin: 0 auto 2.5rem;
+		align-items: center;
+	}
+
+	.home-photo-gallery img {
+		display: block;
+		width: calc(50% - 0.75rem);
+		height: auto;
+		max-height: 340px;
+		object-fit: contain;
+		border-radius: 4px;
+	}
+
+	/* Telefono */
+	@media screen and (max-width: 736px) {
+		.home-photo-gallery {
+			flex-direction: column;
+			width: 100%;
+			gap: 1rem;
+		}
+
+		.home-photo-gallery img {
+			width: 100%;
+			max-height: none;
+		}
+	}
+</style>
+					<div class="home-photo-gallery">
+						<img src="images/foto1.jpeg" alt="Photo 1">
+						<img src="images/foto2.jpeg" alt="Photo 2">
+					</div>
 
 
 					<h2>About the Conference</h2>
